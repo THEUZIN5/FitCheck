@@ -249,3 +249,10 @@ Pedido somente de registro; não executar nesta sessão.
 - Vídeo validado com 5.400 quadros; áudio AAC medido em −14 LUFS e pico verdadeiro −3,5 dBFS, sem escuta direta. Revisão crítica independente aprovada após correção de enquadramentos e timestamps.
 - Limpeza desta produção: 2.532.823.211 bytes de caches, perfis isolados de teste, build temporária de filmagem e intermediários regeneráveis. Preservados originais, referências, saves reais, fontes de edição e builds atual/anterior. Detalhes em cleanup-final.json.
 - Publicação do trailer e das artes continua manual. As builds Windows/Web publicáveis não foram substituídas pelo executável de filmagem.
+
+## Novas raças e encerramento — 14/11/2026
+
+- Pinscher, Shih-tzu e Golden Retriever adicionados como IDs 3/4/5, mantendo Vira-lata/Shiba/Dachshund e saves antigos. Porte, focinho, orelhas, volume de pelagem e cauda próprios; seis opções cabem no criador sem sobrepor os botões inferiores.
+- Fechar o dia 7 após os 21 encontros inicia celebração de 7,4 s com jogador/clientes e cinco fogos, seguida da foto coletiva guardada no quarto. Pausa e avanço para a foto; reabrir lembrança existente preserva arquivo e não repete fogos. Movimento reduzido usa constelações estáticas e câmera fixa.
+- Efeito temporário com uma malha/material, sem luzes ou atores permanentes novos. PETS_FINALE_PASSED: 36 combinações raça/pelagem salvas/recarregadas, IDs legados, pausa, movimento reduzido, câmera restaurada, término automático/manual e foto/progresso preservados. Máximo de 4.847 vértices por cachorro. Compilação de revisão sem erros/avisos.
+- Fonte/roteiro Art/Reviews/PetsFinale; prévias reais Captures/PetsFinale. Alterações na Unity; builds Windows/Web entregues anteriormente preservadas, incluir na próxima build solicitada.

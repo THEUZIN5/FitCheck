@@ -94,6 +94,7 @@ namespace FitCheck
         {
             if(ProofMode&&speechProofActive){DrawSpeechProof();return;}
             if(loadingActive){DrawLoadingScreen();return;}
+            if(weekCelebrating){DrawWeekCelebration();return;}
             var originalMatrix=GUI.matrix;var originalEnabled=GUI.enabled;
             var originalColor=GUI.color;var originalContent=GUI.contentColor;var originalBackground=GUI.backgroundColor;
             GUI.color=Color.white;GUI.contentColor=Color.white;GUI.backgroundColor=Color.white;

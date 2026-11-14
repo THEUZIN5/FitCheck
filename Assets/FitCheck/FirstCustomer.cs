@@ -71,6 +71,7 @@ namespace FitCheck
         void Apply(){if(shopService&&stage==Stage.Dialogue)studio.ApplyCivilian(customer,true);else studio.Apply(outfit,customer);}
         void UpdateCamera()
         {
+            if(weekCelebrating)return;
             if(stage==Stage.WeekMemory)return;
             if(stage==Stage.Title&&titleSceneActive){FrameLiveTitle(Time.unscaledDeltaTime);return;}
             if(stage!=Stage.City&&stage!=Stage.Home&&city!=null&&city.IsHome&&city.gameObject.activeSelf)ExitCity();
@@ -96,6 +97,7 @@ namespace FitCheck
         void Update()
         {
             if(loadingActive){loadingClock+=Time.unscaledDeltaTime;return;}
+            if(weekCelebrating){TickWeekCelebration(Time.unscaledDeltaTime);return;}
             if(stage==Stage.WeekMemory)return;
             ShopProbeMark(0);
             studio.Talking=stage==Stage.Dialogue&&!paused;

@@ -144,7 +144,7 @@ namespace FitCheck
             if(!progress.closed){
                 Txt(new Rect(96,645,1100,75),"As peças dos marcos alcançados chegam no fechamento.",copy,muted);
                 if(Tap(new Rect(96,769,510,67),"Receber recompensas e fechar o dia",true)){
-                    int rewards=progress.rewards.Count;var before=progress.achievements.ToArray();progress.Close();NotifyAchievements(before);bool saved=TrySave();if(saved&&progress.Complete)BeginLoading(OpenWeekMemory);if(progress.rewards.Count>rewards)PlayClip(Clip("unlock_drop"),.65f);else Sound(2);
+                    int rewards=progress.rewards.Count;var before=progress.achievements.ToArray();progress.Close();NotifyAchievements(before);bool saved=TrySave();if(saved&&progress.Complete)BeginLoading(BeginWeekCelebration);if(progress.rewards.Count>rewards)PlayClip(Clip("unlock_drop"),.65f);else Sound(2);
                 }
             }else{
                 Txt(new Rect(96,640,1200,90),progress.rewards.Count>0?"Peças conquistadas: "+string.Join("  /  ",progress.rewards):"Novos visuais podem melhorar sua Reputação. A campanha continua mesmo com notas baixas.",copy,violet);
@@ -234,9 +234,9 @@ namespace FitCheck
             else Txt(new Rect(r.x+20,r.center.y-20,r.width-40,40),"Foto indisponível",action,muted);
         }
         void OnApplicationFocus(bool focus){
-            if(!focus&&(stage==Stage.Dressing||stage==Stage.Confirm)){paused=true;dragging=false;}
+            if(!focus&&(stage==Stage.Dressing||stage==Stage.Confirm||weekCelebrating)){paused=true;dragging=false;}
             if(!focus&&stage==Stage.City){dragging=false;SyncCityCursor();}
         }
-        void OnDestroy(){if(weekMemoryPhoto!=null)Destroy(weekMemoryPhoto);if(bubbleTail!=null)Destroy(bubbleTail);DisposePresentation();Font.textureRebuilt-=FontRebuilt;if(titlePhoto!=null)Destroy(titlePhoto);if(titleScrim!=null)Destroy(titleScrim);if(photo!=null)Destroy(photo);foreach(var t in lockedThumbnails.Values)Destroy(t);foreach(var t in feedPhotos.Values)Destroy(t);if(clickSound!=null)Destroy(clickSound);if(photoSound!=null)Destroy(photoSound);if(awardSound!=null)Destroy(awardSound);}
+        void OnDestroy(){DisposeWeekCelebration();if(weekMemoryPhoto!=null)Destroy(weekMemoryPhoto);if(bubbleTail!=null)Destroy(bubbleTail);DisposePresentation();Font.textureRebuilt-=FontRebuilt;if(titlePhoto!=null)Destroy(titlePhoto);if(titleScrim!=null)Destroy(titleScrim);if(photo!=null)Destroy(photo);foreach(var t in lockedThumbnails.Values)Destroy(t);foreach(var t in feedPhotos.Values)Destroy(t);if(clickSound!=null)Destroy(clickSound);if(photoSound!=null)Destroy(photoSound);if(awardSound!=null)Destroy(awardSound);}
     }
 }

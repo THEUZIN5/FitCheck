@@ -701,3 +701,10 @@ Versão jogável atual: Builds/Windows-Streetwear/FitCheck.exe. Exemplos de nove
 
 
 Limpeza desta entrega: removidos 39 diretórios/pacotes antigos gerados em Builds, liberando 2.33 GiB antes de remover a cópia temporária de compilação. Preservados executável e ZIP de Streetwear e da jeans baggy anterior, todos os fontes Unity/Blender, texturas, referências, artes, capturas e saves. Nenhum cache da Unity ativa foi removido. Relatório local: tools/streetwear-cleanup.json.
+
+## Novas raças e encerramento — 14/11/2026
+
+- Pinscher, Shih-tzu e Golden Retriever adicionados como IDs 3/4/5, mantendo Vira-lata/Shiba/Dachshund e saves antigos. Porte, focinho, orelhas, volume de pelagem e cauda próprios; seis opções cabem no criador sem sobrepor os botões inferiores.
+- Fechar o dia 7 após os 21 encontros inicia celebração de 7,4 s com jogador/clientes e cinco fogos, seguida da foto coletiva guardada no quarto. Pausa e avanço para a foto; reabrir lembrança existente preserva arquivo e não repete fogos. Movimento reduzido usa constelações estáticas e câmera fixa.
+- Efeito temporário com uma malha/material, sem luzes ou atores permanentes novos. PETS_FINALE_PASSED: 36 combinações raça/pelagem salvas/recarregadas, IDs legados, pausa, movimento reduzido, câmera restaurada, término automático/manual e foto/progresso preservados. Máximo de 4.847 vértices por cachorro. Compilação de revisão sem erros/avisos.
+- Fonte/roteiro Art/Reviews/PetsFinale; prévias reais Captures/PetsFinale. Alterações na Unity; builds Windows/Web entregues anteriormente preservadas, incluir na próxima build solicitada.

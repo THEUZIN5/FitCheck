@@ -27,7 +27,8 @@ namespace FitCheck
             Txt(new Rect(28,378,320,28),"Gato ou cachorro?",caption);
             for(int i=0;i<2;i++)if(CreatorButton(new Rect(28+i*165,420,155,48),i==0?"Gato":"Cachorro",pet.species==i)){pet.species=i;pet.breed=0;RefreshCreatorPet();}
             Txt(new Rect(28,500,320,28),"Raça / tipo",caption);
-            for(int i=0;i<pet.Breeds.Length;i++)if(CreatorButton(new Rect(28,542+i*58,320,48),pet.Breeds[i],pet.breed==i)){pet.breed=i;RefreshCreatorPet();}
+            float breedStep=pet.Breeds.Length>4?42:58,breedHeight=pet.Breeds.Length>4?36:48;
+            for(int i=0;i<pet.Breeds.Length;i++)if(CreatorButton(new Rect(28,542+i*breedStep,320,breedHeight),pet.Breeds[i],pet.breed==i)){pet.breed=i;RefreshCreatorPet();}
             Txt(new Rect(1074,126,330,32),"Pelagem",caption);
             for(int i=0;i<PetAppearance.Coats.Length;i++){
                 var r=new Rect(1074+i%3*110,178+i/3*58,100,48);Fill(r,pet.coat==i?CreatorRed:line);var swatch=pet.Copy();swatch.coat=i;Fill(new Rect(r.x+4,r.y+4,r.width-8,r.height-8),swatch.CoatColor);

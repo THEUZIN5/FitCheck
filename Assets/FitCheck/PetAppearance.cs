@@ -5,7 +5,7 @@ namespace FitCheck
     [Serializable] public class PetAppearance
     {
         public int species,breed,coat=2;public string name="Pipoca";
-        public static readonly string[] CatBreeds={"Sem raça definida","Persa","Siamês","Sphynx — sem pelo"},DogBreeds={"Vira-lata","Shiba","Dachshund"};
+        public static readonly string[] CatBreeds={"Sem raça definida","Persa","Siamês","Sphynx — sem pelo"},DogBreeds={"Vira-lata","Shiba","Dachshund","Pinscher","Shih-tzu","Golden Retriever"};
         public static readonly string[] CoatNames={"Caramelo","Preto","Cinza","Creme","Bicolor","Chocolate"};
         public static readonly Color[] Coats={new Color(.67f,.36f,.14f),new Color(.085f,.075f,.07f),new Color(.39f,.42f,.43f),new Color(.85f,.76f,.59f),new Color(.91f,.88f,.80f),new Color(.30f,.14f,.075f)};
         public string[] Breeds=>species==0?CatBreeds:DogBreeds;
